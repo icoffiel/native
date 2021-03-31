@@ -1,5 +1,6 @@
 package com.example.demo.hello;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -8,9 +9,9 @@ import java.util.List;
 @RestController
 public class HelloController {
 
-    private final HelloService helloService;
+    private final IHelloService helloService;
 
-    public HelloController(HelloService helloService) {
+    public HelloController(IHelloService helloService) {
         this.helloService = helloService;
     }
 
